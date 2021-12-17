@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Discord Bot
+node_modules
+.env
+config.json
