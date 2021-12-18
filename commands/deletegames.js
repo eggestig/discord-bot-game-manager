@@ -1,8 +1,10 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { Collection, MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
-const info = require("../info.json");
 const { v4:uuidv4 } = require ('uuid');
-console.log(info);
+
+const fs = require('fs');
+const infoName = '../info.json';
+const info = require(infoName);
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -30,6 +32,7 @@ module.exports = {
         }
         var index = 0;
         var length = 0;
+        var deletes = 0;
 
         //Check that both inputs are not null and are integers between 0 and not leading to out-of-bounds issues
         index = cleanInt(interaction.options.getString("index"));
@@ -40,12 +43,67 @@ module.exports = {
         if(!(length != null && length > 0 && index + length <= info.games.length))
             length = info.games.length - index;
 
-        info.games.splice(index, length);
-		
-        console.log(index + " " + length);
+        for(var i = index; i < index + length; length--, deletes++) {
+            console.log(i);
+            console.log(info.games[i]);
+            const fancyTitle = info.games[i].fancyLabel;
+            const title = info.games[i].label;
+            
+            //Role Availability
+            let role = await interaction.guild.roles.cache.find(x => x.name == fancyTitle);
 
-		if(length > 0) {
-			return await interaction.reply("Pong: Removal of (" + length + ") item(s) starting at index '" + index + "' completed"); 
+            //Text Channel Availability
+            let channel = await interaction.guild.channels.cache.find(x => (x.name == title && x.type == "GUILD_TEXT"));
+
+            //Voice Channel Availability
+            let channelVC = await interaction.guild.channels.cache.find(x => (x.name == title && x.type == "GUILD_VOICE"));
+
+            //Delete game
+            console.log("deleting .json game: '" + fancyTitle + "'");
+            info.games.splice(i, 1);
+
+            //Delete role
+            if(role) {
+                console.log("deleting role: '" + fancyTitle + "'");
+                role.delete();
+            } else {
+                console.log("No role found: '" + fancyTitle + "'");
+            }
+            
+            //Delete text channel
+            if(channel) {
+                console.log("deleting text channel: '" + title + "'");
+                channel.delete();
+            } else {
+                console.log("No text channel found: '" + title + "'");
+            }
+
+            //Delete voice channel
+            if(channelVC) {
+                console.log("deleting voice channel: '" + title + "'");
+                channelVC.delete();
+            } else {
+                console.log("No voice channel found: '" + title + "'");
+            }
+        }
+
+		if(deletes > 0) {
+
+            //Delete Category if no games left
+            const categoryName = "━━Game-Category━";
+			let category = interaction.guild.channels.cache.find(c => c.name == categoryName && c.type == "GUILD_CATEGORY");
+
+            if(info.games.length < 1 && category)
+                category.delete();
+
+            //Write .json deletion to file
+            await fs.writeFile('./info.json', JSON.stringify(info, null, 2), function writeJSON(err) {
+                if (err) return console.log(err);
+                console.log(JSON.stringify(info, null, 2));
+                console.log('writing to ' + './info.json');
+            });
+
+			return await interaction.reply("Pong: Removal of (" + deletes + ") item(s) starting at index '" + index + "' completed"); 
 		}
 
 		await interaction.reply("Pong: No removal(s) were made from given arugments, or there are no more games to delete");

@@ -1,134 +1,54 @@
 {
-    "gameEmbed": {
-        "title": "Select your games here!",
-        "subTitle": "Click a button with the name of the game you would like a role and channel priveliges for.",
-        "image": "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+  "gameEmbed": {
+    "title": "Select your games here!",
+    "subTitle": "Click a button with the name of the game you would like a role and channel priveliges for.",
+    "image": "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+  },
+  "games": [
+    {
+      "id": "86275632-70ce-4d54-b338-207f12bd0ad6",
+      "label": "witcher-3",
+      "fancyLabel": "Witcher 3",
+      "style": "SECONDARY",
+      "roleId": "921834112820584468",
+      "textChannelId": "921834113781084221",
+      "voiceChannelId": "921834115068747807"
     },
-    "games": [
-        {
-            "id": "game000",
-            "label": "Game 0",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game001",
-            "label": "Game 1",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game002",
-            "label": "Game 2",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game003",
-            "label": "Game 3",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game004",
-            "label": "Game 4",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game005",
-            "label": "Game 0",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game006",
-            "label": "Game 1",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game007",
-            "label": "Game 2",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game008",
-            "label": "Game 3",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game009",
-            "label": "Game 4",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game010",
-            "label": "Game 0",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game011",
-            "label": "Game 1",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game012",
-            "label": "Game 2",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game013",
-            "label": "Game 3",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game014",
-            "label": "Game 4",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game015",
-            "label": "Game 0",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game016",
-            "label": "Game 1",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game017",
-            "label": "Game 2",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game018",
-            "label": "Game 3",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game019",
-            "label": "Game 4",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game020",
-            "label": "Game 0",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game021",
-            "label": "Game 1",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game022",
-            "label": "Game 2",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game023",
-            "label": "Game 3",
-            "style": "SECONDARY"
-        },
-        {
-            "id": "game024",
-            "label": "Game 3",
-            "style": "SECONDARY"
-        }
-    ]
+    {
+      "id": "438800ff-347a-4a3c-a2d6-9ee9b5bc970c",
+      "label": "rts-game-thing",
+      "fancyLabel": "rts game thing",
+      "style": "SECONDARY",
+      "roleId": "921834148291813439",
+      "textChannelId": "921834149948563536",
+      "voiceChannelId": "921834151022309417"
+    },
+    {
+      "id": "094ead1e-07d0-4b90-9f5d-9ac658461bda",
+      "label": "league-of-legends-🤢",
+      "fancyLabel": "League of Legends 🤢",
+      "style": "SECONDARY",
+      "roleId": "921834265069617192",
+      "textChannelId": "921834266114023474",
+      "voiceChannelId": "921834267024195604"
+    },
+    {
+      "id": "9e8fb347-d48e-41de-be46-0706214b000c",
+      "label": "best-game",
+      "fancyLabel": "best game",
+      "style": "SECONDARY",
+      "roleId": "921845877499367454",
+      "textChannelId": "921845878573137961",
+      "voiceChannelId": "921845879604916255"
+    },
+    {
+      "id": "f5ddc70a-d112-4c26-9ed5-b5068392b8a9",
+      "label": "a",
+      "fancyLabel": "a",
+      "style": "SECONDARY",
+      "roleId": "921846114666307714",
+      "textChannelId": "921846115811336233",
+      "voiceChannelId": "921846116738273280"
+    }
+  ]
 }

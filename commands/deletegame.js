@@ -1,8 +1,10 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { Collection, MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
-const info = require("../info.json");
 const { v4:uuidv4 } = require ('uuid');
-console.log(info);
+
+const fs = require('fs');
+const infoName = '../info.json';
+const info = require(infoName);
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -15,23 +17,79 @@ module.exports = {
 		  		.setRequired(true)
 	  	),
 	async execute(interaction) {
-		console.log(interaction.options);
-		console.log(interaction.options.getString("title"));
+
+		//https://stackoverflow.com/questions/2116558/fastest-method-to-replace-all-instances-of-a-character-in-a-string/2116614
+		// - qwerty (Edited by Colorfully Monochrome)
+		String.prototype.replaceAll = function(str1, str2, ignore) {
+			return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+		} 
+
+		const fancyTitle = interaction.options.getString("title");
+		const title = fancyTitle.replaceAll(' ', '-').toLowerCase();
 		
-		const title = interaction.options.getString("title");
+		//Role Availability
+		var roleId;
+		let role = await interaction.guild.roles.cache.find(x => x.name == fancyTitle);
+
+		//Text Channel Availability
+		var textChannelId;
+		let channel = await interaction.guild.channels.cache.find(x => (x.name == title && x.type == "GUILD_TEXT"));
+
+		//Voice Channel Availability
+		var voiceChannelId;
+		let channelVC = await interaction.guild.channels.cache.find(x => (x.name == title && x.type == "GUILD_VOICE"));
+
 		
-		var removals = 0;
 		for(var i = 0; i < info.games.length; i++) {
 			if(info.games[i].label == title) {
+				//Delete game
+				console.log("deleting .json game: '" + fancyTitle + "'");
 				info.games.splice(i, 1);
-				removals++;
+
+				//Delete role
+				if(role) {
+					console.log("deleting role: '" + fancyTitle + "'");
+					role.delete();
+				} else {
+					console.log("No role found: '" + fancyTitle + "'");
+				}
+				
+				//Delete text channel
+				if(channel) {
+					console.log("deleting text channel: '" + title + "'");
+					channel.delete();
+				} else {
+					console.log("No text channel found: '" + title + "'");
+				}
+
+				//Delete voice channel
+				if(channelVC) {
+					console.log("deleting voice channel: '" + title + "'");
+					channelVC.delete();
+				} else {
+					console.log("No voice channel found: '" + title + "'");
+				}
+
+				//Delete Category if no games left
+				const categoryName = "━━Game-Category━";
+				let category = interaction.guild.channels.cache.find(c => c.name == categoryName && c.type == "GUILD_CATEGORY");
+	
+				if(info.games.length < 1 && category)
+					category.delete();
+	
+
+				//Write .json deletion to file
+				await fs.writeFile('./info.json', JSON.stringify(info, null, 2), function writeJSON(err) {
+					if (err) return console.log(err);
+					console.log(JSON.stringify(info, null, 2));
+					console.log('writing to ' + './info.json');
+				});
+
+				return await interaction.reply("Pong: Removal of game matching the title '" + title + "' completed"); 
 			}
 		}
 
-		if(removals > 0) {
-			return await interaction.reply("Pong: Removal of (" + removals + ") item(s) matching the title '" + title + "' completed"); 
-		}
 
-		await interaction.reply("Pong: No removal(s) were made due to no match found for the title '" + title + "'");
+		await interaction.reply("Pong: No removal was made due to no match found for the title '" + title + "'");
 	}
 };
