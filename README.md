@@ -34,4 +34,7 @@ You can find your guild ID by just rightclicking your server and copying the ID.
 <img src="https://raw.githubusercontent.com/eggestig/discord-bot-game-manager/main/applicationID.png"
      alt="Discord developer dashboard, green arrow pointing towards the application ID">
      
-3. To run the bot, you just have to type the command `node index.js` in the folder `/discord-bot-game-manager` (though this could be renamed to anything)
+3. You may also need to change your bot's permissions, the ones that I currently use are the following:
+<img src="https://raw.githubusercontent.com/eggestig/discord-bot-game-manager/main/permissions.PNG"
+     alt="Discord developer dashboard, permissions">
+4. To run the bot, you just have to type the command `node index.js` in the folder `/discord-bot-game-manager` (though this could be renamed to anything)
