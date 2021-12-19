@@ -9,17 +9,17 @@ const info = require(infoName);
 module.exports = {
 	data: new SlashCommandBuilder()
 	    .setName("deletegames")
-	    .setDescription("Remove all games after [index] and up to [length]. If no parameters are given: [index] = 0 & [length] = info.games.length (where info.games is where all the games are stored)")
+	    .setDescription("Remove all games after [index] and up to [length]. default is 0 and total games respectively")
 	    .addStringOption(option =>
 		    option
 		        .setName("index")
-		        .setDescription("[Optional] Remove only on and after given index. (If not valid, set to 0)")
+		        .setDescription("[Optional] Remove only on and after given index.")
 		        .setRequired(false),
         )
         .addStringOption(option =>
 		    option
 		        .setName("length")
-		        .setDescription("[Optional] Remove only up to given length. (If not valid, set to amount of games currently listed)")
+		        .setDescription("[Optional] Remove only up to given length.")
 		        .setRequired(false),
         ),
 	    async execute(interaction) {
