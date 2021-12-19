@@ -9,7 +9,7 @@ const info = require(infoName);
 module.exports = {
 	data: new SlashCommandBuilder()
 	    .setName("deletegames")
-	    .setDescription("Remove all games. [Optional]: 'index' and 'length' for more control")
+	    .setDescription("Remove all games after [index] and up to [length]. If no parameters are given: [index] = 0 & [length] = info.games.length (where info.games is where all the games are stored)")
 	    .addStringOption(option =>
 		    option
 		        .setName("index")
@@ -30,18 +30,19 @@ module.exports = {
             x = Number(x);
             return x >= 0 ? Math.floor(x) : Math.ceil(x);
         }
+
         var index = 0;
         var length = 0;
         var deletes = 0;
 
-        //Check that both inputs are not null and are integers between 0 and not leading to out-of-bounds issues
+        //Check that both parameters are not null and are not leading to out-of-bounds issues
         index = cleanInt(interaction.options.getString("index"));
         if(!(index != null && index > 0 && index <= info.games.length))
-            index = 0;
+            index = 0; //Default value
 
         length = cleanInt(interaction.options.getString("length"));
         if(!(length != null && length > 0 && index + length <= info.games.length))
-            length = info.games.length - index;
+            length = info.games.length - index; //Default value
 
         for(var i = index; i < index + length; length--, deletes++) {
             console.log(i);
@@ -103,9 +104,11 @@ module.exports = {
                 console.log('writing to ' + './info.json');
             });
 
+            //Return, and reply how many games were deleted and what start index the deletes were made on
 			return await interaction.reply("Pong: Removal of (" + deletes + ") item(s) starting at index '" + index + "' completed"); 
 		}
 
+        //Reply that no games were deleted for due to no match
 		await interaction.reply("Pong: No removal(s) were made from given arugments, or there are no more games to delete");
 	}
 };

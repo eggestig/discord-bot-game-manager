@@ -6,49 +6,13 @@
   },
   "games": [
     {
-      "id": "86275632-70ce-4d54-b338-207f12bd0ad6",
-      "label": "witcher-3",
-      "fancyLabel": "Witcher 3",
+      "id": "b0a3273d-b160-46c0-b582-f3df1741789e",
+      "label": "ember-sword",
+      "fancyLabel": "ember sword",
       "style": "SECONDARY",
-      "roleId": "921834112820584468",
-      "textChannelId": "921834113781084221",
-      "voiceChannelId": "921834115068747807"
-    },
-    {
-      "id": "438800ff-347a-4a3c-a2d6-9ee9b5bc970c",
-      "label": "rts-game-thing",
-      "fancyLabel": "rts game thing",
-      "style": "SECONDARY",
-      "roleId": "921834148291813439",
-      "textChannelId": "921834149948563536",
-      "voiceChannelId": "921834151022309417"
-    },
-    {
-      "id": "094ead1e-07d0-4b90-9f5d-9ac658461bda",
-      "label": "league-of-legends-🤢",
-      "fancyLabel": "League of Legends 🤢",
-      "style": "SECONDARY",
-      "roleId": "921834265069617192",
-      "textChannelId": "921834266114023474",
-      "voiceChannelId": "921834267024195604"
-    },
-    {
-      "id": "9e8fb347-d48e-41de-be46-0706214b000c",
-      "label": "best-game",
-      "fancyLabel": "best game",
-      "style": "SECONDARY",
-      "roleId": "921845877499367454",
-      "textChannelId": "921845878573137961",
-      "voiceChannelId": "921845879604916255"
-    },
-    {
-      "id": "f5ddc70a-d112-4c26-9ed5-b5068392b8a9",
-      "label": "a",
-      "fancyLabel": "a",
-      "style": "SECONDARY",
-      "roleId": "921846114666307714",
-      "textChannelId": "921846115811336233",
-      "voiceChannelId": "921846116738273280"
+      "roleId": "921885883098095637",
+      "textChannelId": "921885884582867034",
+      "voiceChannelId": "921885885425913917"
     }
   ]
 }

@@ -9,11 +9,11 @@ const info = require(infoName);
 module.exports = {
 	data: new SlashCommandBuilder()
 	  	.setName("deletegame")
-	  	.setDescription("List all games and pick roles(channels)")
+	  	.setDescription("Remove a game (Use the name of the role or the button text in /displaygames)")
 	  	.addStringOption(option =>
 			option
 		  		.setName("title")
-		  		.setDescription("Enter the title of a game to")
+		  		.setDescription("Enter the title of a game to delete")
 		  		.setRequired(true)
 	  	),
 	async execute(interaction) {
@@ -85,11 +85,12 @@ module.exports = {
 					console.log('writing to ' + './info.json');
 				});
 
+            	//Return, and reply what game was deleted
 				return await interaction.reply("Pong: Removal of game matching the title '" + title + "' completed"); 
 			}
 		}
 
-
+		//Reply that no games were deleted for due to no match
 		await interaction.reply("Pong: No removal was made due to no match found for the title '" + title + "'");
 	}
 };

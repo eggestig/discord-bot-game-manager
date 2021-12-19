@@ -10,11 +10,11 @@ const info = require(infoName);
 module.exports = {
 	data: new SlashCommandBuilder()
 	  	.setName("addgame")
-	  	.setDescription("List all games and pick roles(channels)")
+	  	.setDescription("Add a game (up to 25 games are currently supported)")
 	  	.addStringOption(option =>
 			option
 		  		.setName("title")
-		  		.setDescription("Enter the title of a game")
+		  		.setDescription("Enter the title of a game to add")
 		  		.setRequired(true)
 	  	),
 	async execute(interaction) {	
@@ -44,20 +44,22 @@ module.exports = {
 		let channelVC = await interaction.guild.channels.cache.find(x => (x.name == title && x.type == "GUILD_VOICE"));
 		
 		console.log(channel);
+
+		//Create channel VC, channel, and role if none of them exists
 		if(!channelVC && !channel && !role) {
 
 			const categoryName = "━━Game-Category━";
 			let category = interaction.guild.channels.cache.find(c => c.name == categoryName && c.type == "GUILD_CATEGORY");
-
 			var categoryId;
 
+			//Set categoryId to the existing category if it exists, otherwise create it
 			if (category) {
 				categoryId = category.id;
 			} else {
 				console.error(`One of the channels is missing:\nCategory: ${!!category}\nChannel: ${!!channel}`);
 				console.error("Creating category: '" + categoryName + "'...");
 
-				//make category
+				//Make category
 				console.log(interaction.guild.me._roles[0])
 				await interaction.guild.channels.create(categoryName, {
 					type: 'GUILD_CATEGORY',
@@ -158,10 +160,12 @@ module.exports = {
 				console.log(JSON.stringify(info, null, 2));
 				console.log('writing to ' + './info.json');
 			});
+
+			//Reply that a new game has been added
 			await interaction.reply("Pong: New game added: " + fancyTitle);
 		}
 		else {
-			//channel exists
+			//Reply that channel VC, channel, and/or role already exists
 			await interaction.reply("Voice/channel/role already exists");
 		}
 	}
