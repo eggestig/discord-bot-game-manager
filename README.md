@@ -26,12 +26,15 @@ Since you want the bot running on your own server, you need to complete a few ta
     "guildId": ""
 }
 ```
-You can find your guild ID by just rightclicking your server and copying the ID. The token ID and client ID respectively can be found in your discord developer dashboard as followed:
-
+You can find your guild ID by just rightclicking your server and copying the ID. The token ID and client ID respectively can be found in your discord developer dashboard as followed:  
 <img src="https://raw.githubusercontent.com/eggestig/discord-bot-game-manager/main/tokenID.png"
-     alt="Discord developer dashboard, green arrow pointing towards the token ID">
-
+     alt="Discord developer dashboard, green arrow pointing towards the token ID">  
+  
 <img src="https://raw.githubusercontent.com/eggestig/discord-bot-game-manager/main/applicationID.png"
-     alt="Discord developer dashboard, green arrow pointing towards the application ID">
-     
-3. To run the bot, you just have to type the command `node index.js` in the folder `/discord-bot-game-manager` (though this could be renamed to anything)
+     alt="Discord developer dashboard, green arrow pointing towards the application ID">  
+  
+3. You may also need to change your bot's permissions, the ones that I currently use are the following:
+<img src="https://raw.githubusercontent.com/eggestig/discord-bot-game-manager/main/permissions.PNG"
+     alt="Discord developer dashboard, permissions">  
+  
+4. To run the bot, you just have to type the command `node index.js` in the folder `/discord-bot-game-manager` (though this could be renamed to anything)
