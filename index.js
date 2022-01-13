@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { Client, Collection, Intents, MessageActionRow, MessageButton  } = require('discord.js');
-const { token } = require('./config.json');
+const { token } = require('./info/config.json');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -15,6 +15,6 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
-
+console.log("Bot login...\n")
 //Start bot
 client.login(token);

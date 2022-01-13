@@ -1,0 +1,14 @@
+{
+  "gameCategory": {
+    "name": "━━━━━GAMES━━━━━",
+    "type": "GUILD_CATEGORY"
+  }, 
+  "pickGamesChannel": {
+    "name": "pick-games",
+    "type": "GUILD_TEXT"
+  },
+  "botCommandsChannel": {
+    "name": "bot-commands",
+    "type": "GUILD_TEXT"
+  }
+}

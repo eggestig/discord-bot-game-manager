@@ -1,0 +1,304 @@
+{
+  "games": [
+    {
+      "id": "2f99afca-5192-4fe0-aa74-623214ba5f43",
+      "label": "1",
+      "fancyLabel": "1",
+      "style": "SECONDARY",
+      "roleId": "931036305398329466",
+      "parent": "931036306878906389",
+      "textChannelId": "931036307927466044",
+      "voiceChannelId": "931036308405628999"
+    },
+    {
+      "id": "fabc3007-d6d0-4e09-836d-5754b8a76ee6",
+      "label": "2",
+      "fancyLabel": "2",
+      "style": "SECONDARY",
+      "roleId": "931036312847409215",
+      "parent": "931036313631727646",
+      "textChannelId": "931036314340577302",
+      "voiceChannelId": "931036315477221426"
+    },
+    {
+      "id": "ac4fe4eb-2986-4701-9b29-1d519170b2fe",
+      "label": "3",
+      "fancyLabel": "3",
+      "style": "SECONDARY",
+      "roleId": "931036326759911424",
+      "parent": "931036327602978877",
+      "textChannelId": "931036328433442816",
+      "voiceChannelId": "931036329276506192"
+    },
+    {
+      "id": "e7fd5898-acac-42ef-9e0a-dab696e538a7",
+      "label": "4",
+      "fancyLabel": "4",
+      "style": "SECONDARY",
+      "roleId": "931036376206544936",
+      "parent": "931036377024438333",
+      "textChannelId": "931036378056245288",
+      "voiceChannelId": "931036379075465236"
+    },
+    {
+      "id": "6e9d3631-41bd-46d2-824b-05e62b7ab457",
+      "label": "6",
+      "fancyLabel": "6",
+      "style": "SECONDARY",
+      "roleId": "931036397928853534",
+      "parent": "931036398759313470",
+      "textChannelId": "931036400235720745",
+      "voiceChannelId": "931036401162653706"
+    },
+    {
+      "id": "884d2cfa-1f97-4f1e-93a1-8a254ceda490",
+      "label": "5",
+      "fancyLabel": "5",
+      "style": "SECONDARY",
+      "roleId": "931037484916301886",
+      "parent": "931037485599965195",
+      "textChannelId": "931037486807916554",
+      "voiceChannelId": "931037487713906788"
+    },
+    {
+      "id": "035129b4-8b44-4204-88c8-c7f458c2810b",
+      "label": "9",
+      "fancyLabel": "9",
+      "style": "SECONDARY",
+      "roleId": "931037581796327444",
+      "parent": "931037582945570896",
+      "textChannelId": "931037584270983218",
+      "voiceChannelId": "931037585118232596"
+    },
+    {
+      "id": "e3f25ab6-a4e6-4130-a054-61be80479564",
+      "label": "8",
+      "fancyLabel": "8",
+      "style": "SECONDARY",
+      "roleId": "931037612653817967",
+      "parent": "931037613870166076",
+      "textChannelId": "931037614776123443",
+      "voiceChannelId": "931037615728242698"
+    },
+    {
+      "id": "742be553-b3c3-4220-9e57-82c8e57181e8",
+      "label": "10",
+      "fancyLabel": "10",
+      "style": "SECONDARY",
+      "roleId": "931037633734381588",
+      "parent": "931037634594238514",
+      "textChannelId": "931037635512762438",
+      "voiceChannelId": "931037636544569384"
+    },
+    {
+      "id": "787315de-a023-44a3-a233-57d581ff0b6c",
+      "label": "11",
+      "fancyLabel": "11",
+      "style": "SECONDARY",
+      "roleId": "931037638205530162",
+      "parent": "931037639149244497",
+      "textChannelId": "931037640189411328",
+      "voiceChannelId": "931037640730488844"
+    },
+    {
+      "id": "c158b1e5-f325-4c0a-8f03-3579a4cf68b3",
+      "label": "12",
+      "fancyLabel": "12",
+      "style": "SECONDARY",
+      "roleId": "931037655385403493",
+      "parent": "931037656433975306",
+      "textChannelId": "931037657574809610",
+      "voiceChannelId": "931037659701325925"
+    },
+    {
+      "id": "8e5fa155-1ad4-4f64-998e-040acebef258",
+      "label": "13",
+      "fancyLabel": "13",
+      "style": "SECONDARY",
+      "roleId": "931037656610140210",
+      "parent": "931037658635972638",
+      "textChannelId": "931037660682780713",
+      "voiceChannelId": "931037661894934568"
+    },
+    {
+      "id": "a368f326-2ef8-42bd-a702-e10e96ffd7df",
+      "label": "14",
+      "fancyLabel": "14",
+      "style": "SECONDARY",
+      "roleId": "931037676767944704",
+      "parent": "931037677615218728",
+      "textChannelId": "931037680035299358",
+      "voiceChannelId": "931037680962261093"
+    },
+    {
+      "id": "f2817670-0997-4a12-acfd-382c587ce9ef",
+      "label": "15",
+      "fancyLabel": "15",
+      "style": "SECONDARY",
+      "roleId": "931037680530251776",
+      "parent": "931037681750773780",
+      "textChannelId": "931037682602246184",
+      "voiceChannelId": "931037683453657119"
+    },
+    {
+      "id": "1f2e933e-e940-49cf-b342-d094159ea33b",
+      "label": "16",
+      "fancyLabel": "16",
+      "style": "SECONDARY",
+      "roleId": "931037698515427368",
+      "parent": "931037699287187496",
+      "textChannelId": "931037700163764265",
+      "voiceChannelId": "931037701082329108"
+    },
+    {
+      "id": "1089388c-cf3a-44cd-af00-5c680149b4cf",
+      "label": "17",
+      "fancyLabel": "17",
+      "style": "SECONDARY",
+      "roleId": "931037762939944970",
+      "parent": "931037763829112923",
+      "textChannelId": "931037764986761256",
+      "voiceChannelId": "931037766417010709"
+    },
+    {
+      "id": "f094bde0-5780-47b0-9255-25f84e08ce35",
+      "label": "18",
+      "fancyLabel": "18",
+      "style": "SECONDARY",
+      "roleId": "931037772058329160",
+      "parent": "931037772922380299",
+      "textChannelId": "931037774155505674",
+      "voiceChannelId": "931037775342485534"
+    },
+    {
+      "id": "2249c48c-5ad6-4a06-9334-41a6a1e7a2c2",
+      "label": "19",
+      "fancyLabel": "19",
+      "style": "SECONDARY",
+      "roleId": "931037784670621716",
+      "parent": "931037785404637247",
+      "textChannelId": "931037786541264947",
+      "voiceChannelId": "931037787518558209"
+    },
+    {
+      "id": "85cda334-6b6e-4024-971a-78839d9476fc",
+      "label": "20",
+      "fancyLabel": "20",
+      "style": "SECONDARY",
+      "roleId": "931037794908917810",
+      "parent": "931037795298979911",
+      "textChannelId": "931037796741808148",
+      "voiceChannelId": "931037797538725938"
+    },
+    {
+      "id": "0681e3e1-00e9-4a58-a3d5-2a0a31183bf3",
+      "label": "21",
+      "fancyLabel": "21",
+      "style": "SECONDARY",
+      "roleId": "931037806212546570",
+      "parent": "931037807118536754",
+      "textChannelId": "931037808188080158",
+      "voiceChannelId": "931037808922095618"
+    },
+    {
+      "id": "d9d4aca4-040f-4cad-bde6-f77ced9640b2",
+      "label": "22",
+      "fancyLabel": "22",
+      "style": "SECONDARY",
+      "roleId": "931037820976496641",
+      "parent": "931037822335455252",
+      "textChannelId": "931037823241441351",
+      "voiceChannelId": "931037824319361024"
+    },
+    {
+      "id": "5330b92e-5b5b-4192-9429-512297aa8f3b",
+      "label": "23",
+      "fancyLabel": "23",
+      "style": "SECONDARY",
+      "roleId": "931037831764250694",
+      "parent": "931037832632496158",
+      "textChannelId": "931037833496522792",
+      "voiceChannelId": "931037834742218752"
+    },
+    {
+      "id": "f50ada72-8ff9-4cfb-87cc-d756ea4ed614",
+      "label": "24",
+      "fancyLabel": "24",
+      "style": "SECONDARY",
+      "roleId": "931037839456632877",
+      "parent": "931037840597454888",
+      "textChannelId": "931037841033682995",
+      "voiceChannelId": "931037842359074866"
+    },
+    {
+      "id": "4762a561-efad-494c-a64d-52a336862271",
+      "label": "26",
+      "fancyLabel": "26",
+      "style": "SECONDARY",
+      "roleId": "931037854522572860",
+      "parent": "931037856179298324",
+      "textChannelId": "931037858171600957",
+      "voiceChannelId": "931037859002069043"
+    },
+    {
+      "id": "41a1b9ff-0d62-4faf-9304-2f2a456ee892",
+      "label": "27",
+      "fancyLabel": "27",
+      "style": "SECONDARY",
+      "roleId": "931038549946540084",
+      "parent": "931038551204831242",
+      "textChannelId": "931038552182128692",
+      "voiceChannelId": "931038553369104395"
+    },
+    {
+      "id": "8c8ca5bd-7770-4de9-88a0-10a30907d343",
+      "label": "28",
+      "fancyLabel": "28",
+      "style": "SECONDARY",
+      "roleId": "931040274266878013",
+      "parent": "931040275357401098",
+      "textChannelId": "931040276770873405",
+      "voiceChannelId": "931040277760708648"
+    },
+    {
+      "id": "3a4ce554-c253-4ad7-9cb0-8e3fe435f7f2",
+      "label": "an-actual-game",
+      "fancyLabel": "An actual game",
+      "style": "SECONDARY",
+      "roleId": "931043635603062824",
+      "parent": "931043636462882816",
+      "textChannelId": "931043637373067314",
+      "voiceChannelId": "931043638274818058"
+    },
+    {
+      "id": "3319adcc-5bd1-4154-a7dd-cfd71307c7a1",
+      "label": "ember-sword",
+      "fancyLabel": "Ember Sword",
+      "style": "SECONDARY",
+      "roleId": "931043714636316734",
+      "parent": "931043715886219314",
+      "textChannelId": "931043717203234826",
+      "voiceChannelId": "931043719417823262"
+    },
+    {
+      "id": "ead27c39-fb30-4fb3-a044-75b1e6385f33",
+      "label": "guild-wars-2",
+      "fancyLabel": "Guild Wars 2",
+      "style": "SECONDARY",
+      "roleId": "931043803631063080",
+      "parent": "931043804117622796",
+      "textChannelId": "931043805568860191",
+      "voiceChannelId": "931043806801985546"
+    },
+    {
+      "id": "6c8533c4-5532-4a1f-9aa7-32db7827c3e8",
+      "label": "ember-sword-2",
+      "fancyLabel": "Ember Sword 2",
+      "style": "SECONDARY",
+      "roleId": "931049355639660674",
+      "parent": "931049356478529607",
+      "textChannelId": "931049357241884733",
+      "voiceChannelId": "931049358504390696"
+    }
+  ]
+}
