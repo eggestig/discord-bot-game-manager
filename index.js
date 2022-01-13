@@ -15,6 +15,7 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
+
 console.log("Bot login...\n")
 //Start bot
 client.login(token);
