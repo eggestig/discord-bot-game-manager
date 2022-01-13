@@ -1,3 +1,4 @@
+const { Console } = require('console');
 const fs = require('fs');
 const gameInfoLocation = 'info/gameInfo.json';
 const gameInfo = require('../../' + gameInfoLocation);
@@ -55,16 +56,19 @@ async function deleteGame(interaction, fancyTitle, title) {
 
 	for(let i = 0; i < gameInfo.games.length; i++) {
 		if(gameInfo.games[i].label == title) {
-
+			console.log("role");
 			if(role)
 				deleteRoleOrChannel(role);
-			
+			console.log("cat");
 			if(category)
 				deleteRoleOrChannel(category);
-			
+			console.log("text");
+			console.log(title);
+			console.log(text);
 			if(text)
 				deleteRoleOrChannel(text);
 			
+			console.log("voice");
 			if(voice)
 				deleteRoleOrChannel(voice);
 			

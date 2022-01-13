@@ -1,5 +1,5 @@
 const setupInfo = require("../info/setupInfo.json");
-const config = require("../info/config.json");
+const config    = require("../info/config.json");
 
 async function setupCategory(guild) {
 	let categoryId;

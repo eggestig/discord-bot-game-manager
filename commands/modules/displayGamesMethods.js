@@ -67,7 +67,11 @@ async function deleteMessages(channel, limit) {
 		const messages = await channel.messages.fetch({ limit: limit });	
 		if(messages) {
 			messages.forEach((message) => {
-				message.delete();
+				try {
+					message.delete();
+				} catch(err) {
+					console.log("Message already deleted");
+				}
 			})
 		}	
 	}

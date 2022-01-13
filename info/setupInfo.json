@@ -10,5 +10,25 @@
   "botCommandsChannel": {
     "name": "bot-commands",
     "type": "GUILD_TEXT"
+  },
+  "config": {
+    "location": "info/config.json",
+    "content": {
+      "token": "",
+      "clientId": "",
+      "guildId": ""
+    }
+  },
+  "gameInfo": {
+    "location": "info/gameInfo.json",
+    "content": {
+      "games": []
+    }
+  },
+  "importGames": {
+    "location": "info/gameInfo.json",
+    "content": {
+      "games": []
+    }
   }
 }

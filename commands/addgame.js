@@ -14,7 +14,7 @@ module.exports = {
 	  	),
 	async execute(interaction) {	
 		const fancyTitle = interaction.options.getString("title"); // League of Legends
-		const title = fancyTitle.replaceAll(' ', '-').toLowerCase(); // league-of-legends
+		const title = fancyTitle.replaceAll('-', '').replaceAll(' ', '-').replaceAll(':', '-').toLowerCase(); // league-of-legends
 
 		const added = await addGame(interaction, fancyTitle, title);
 

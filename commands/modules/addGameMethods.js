@@ -8,6 +8,7 @@ async function createGameRole(interaction, name, color) {
 	console.log(`Creating game role '${name}'...`);
 
 	let role;
+	
 	await interaction.guild.roles.create({
 		name: name,		
 		permissions: [],
@@ -19,6 +20,7 @@ async function createGameRole(interaction, name, color) {
 		console.log(`Game role '${name}' (${res.id}) created.`);
 		role = res;
 	});
+	
 
 	return role;
 };
@@ -164,9 +166,13 @@ async function find(interaction, fancyTitle, title) {
 };
 
 async function create(interaction, fancyTitle, title) {
-	const createdRole     = await createGameRole(interaction, fancyTitle, "BLUE");
+	//console.log("GAME ROLES");
+	let createdRole       = await createGameRole(interaction, fancyTitle, "BLUE");
+	//console.log("GAME CATEGORY");
 	const createdCategory = await createGameCategory(interaction, fancyTitle, createdRole.id);
+	//console.log("GAME TEXT");
 	const createdText     = await createGameTextChannel(interaction, title, createdRole.id, createdCategory.id); 
+	//console.log("GAME VOICE");
 	const createdVoice    = await createGameVoiceChannel(interaction, title, createdRole.id, createdCategory.id);
 
 	return {createdRole, createdCategory, createdText, createdVoice};
